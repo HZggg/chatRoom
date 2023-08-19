@@ -32,7 +32,7 @@ Login::~Login()
     delete ui;
 }
 
-
+//窗口移动
 void Login::mousePressEvent(QMouseEvent *event)
 {
     mOffset = mOffset = event->globalPos() - this->pos();

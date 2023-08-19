@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     });
 }
 
+//窗口移动
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
     mOffset = event->globalPos() - this->pos();
