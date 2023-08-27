@@ -421,7 +421,7 @@ background-color: rgb(255, 255, 255);</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_2">
              <item row="0" column="1">
-              <widget class="QLineEdit" name="lineEditSetServerIP"/>
+              <widget class="IPLineEdit" name="lineEditSetServerIP"/>
              </item>
              <item row="0" column="0">
               <widget class="QLabel" name="lblSetServerIP">
@@ -508,6 +508,13 @@ background-color: rgb(255, 255, 255);</string>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>IPLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">iplineedit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="res.qrc"/>
  </resources>

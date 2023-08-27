@@ -1,5 +1,6 @@
 #ifndef LOGIN_H
 #define LOGIN_H
+#include "clientsocket.h"
 
 #include <QWidget>
 #include <QMouseEvent>
@@ -23,12 +24,17 @@ protected:
     void mouseMoveEvent(QMouseEvent *event) override;
 
 private slots:
-    void on_btnLogin_clicked();
+    void on_btnLogin_clicked(); //登录
+
+    void onSignalMessage(const quint8 &type, const QJsonValue &dataVal);
+    void onSignalStatus(const quint8 &state);
 
 private:
     Ui::Login *ui;
 
     QPoint mOffset; //鼠标点击时，点击点与窗口左上角的偏移
+
+    ClientSocket *m_tcpSocket;
 };
 
 #endif // LOGIN_H
